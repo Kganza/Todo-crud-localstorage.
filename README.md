@@ -1,2 +1,0 @@
-# Todo-crud-localstorage.
-task
