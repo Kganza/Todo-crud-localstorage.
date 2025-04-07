@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A professional To-Do App with CRUD operations using LocalStorage" />
+  <title>To-Do App | CRUD + LocalStorage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>📝 To-Do List</h1>
+    </header>
+
+    <section aria-label="Task Form">
+      <form id="task-form" autocomplete="off">
+        <input type="hidden" id="task-id" />
+
+        <label for="task-name">Task Name</label>
+        <input type="text" id="task-name" placeholder="e.g. Read a book" required />
+
+        <label for="task-type">Task Type</label>
+        <select id="task-type" required>
+          <option value="">Select Type</option>
+          <option value="Personal">Personal</option>
+          <option value="Work">Work</option>
+          <option value="Study">Study</option>
+        </select>
+
+        <label for="task-desc">Description</label>
+        <textarea id="task-desc" placeholder="Add a short description..." required></textarea>
+
+        <label for="task-bg"> Background</label>
+        <input type="color" id="task-bg" value="#ffffff" />
+
+        <button type="submit">💾 Save Task</button>
+      </form>
+    </section>
+
+    <section class="controls">
+      <button id="delete-tasks">🗑️ Delete All Tasks</button>
+    </section>
+
+    <section id="task-list" aria-label="Task List"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
